@@ -146,6 +146,28 @@
             font-family: 'Patrick Hand', cursive;
         }
 
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .button-group a {
+            background-color: #4169E1;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Patrick Hand', cursive;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button-group a:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
         .features {
             display: flex;
             justify-content: center;
@@ -153,7 +175,7 @@
         }
 
         .features img {
-            max-width: 250px;
+            max-width: 200px;
             width: 100%;
             height: auto;
             border: 5px solid #0033A0; /* Royal blue border */
@@ -259,21 +281,22 @@
         <p>Elevate Your Server with Rivvix</p>
         <p>Rivvix provides a comprehensive suite of features to enhance your Discord experience, from moderation and music to giveaways and more.</p>
         <div class="button-group">
-            <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&permissions=28580859346423&integration_type=0&scope=bot+applications.commands" target="_blank">Add to Server</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&scope=bot" target="_blank">Invite Rivvix</a>
             <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Support</a>
+            <a href="https://top.gg/bot/1087160815431458946/vote" target="_blank">Vote on top.gg</a>
         </div>
     </section>
 
     <section id="features" class="section">
-        <h1>Features</h1>
+        <h2>Features</h2>
         <div class="features">
-            <img src="https://i.imgur.com/fjwJU1w.png" alt="Ticket Feature">
-            <img src="https://i.imgur.com/DIkiTE7.png" alt="Moderation Feature">
+            <img src="https://i.imgur.com/YbSk4zG.png" alt="Music Feature">
+            <img src="https://i.imgur.com/5Gq8mHZ.png" alt="Moderation Feature">
             <img src="https://i.imgur.com/6BZMeNU.png" alt="Giveaway Feature">
         </div>
     </section>
 
-    <section id="developers" class="developers">
+    <section id="developers" class="section">
         <h2>Meet the Developers</h2>
         <div class="developer-images">
             <div class="developer">
