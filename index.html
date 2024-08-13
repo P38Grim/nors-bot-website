@@ -19,7 +19,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
     <style>
         body {
-            background-color: #000000; /* Black background */
+            background: linear-gradient(45deg, #000000, #4169E1); /* Black to Royal Blue gradient */
+            animation: fadeBackground 10s ease infinite;
+        }
+
+        @keyframes fadeBackground {
+            0% {
+                background: linear-gradient(45deg, #000000, #4169E1);
+            }
+            50% {
+                background: linear-gradient(45deg, #4169E1, #000000);
+            }
+            100% {
+                background: linear-gradient(45deg, #000000, #4169E1);
+            }
         }
 
         .gradientBg {
@@ -131,19 +144,19 @@
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </a>
-                <a href="#features" class="normalTextBold text-white secBg opacity-60 hover:opacity-100 inline-flex justify-center items-center py-3 px-6 text-center rounded-full">
-                    Features
-                </a>
+                <a href="#features" class="normalTextBold text-white secBg opacity-60 hover:opacity-100 inline-flex justify-center items-center py-3 px-6 text-center rounded-full">Features</a>
             </div>
+            <p class="smallText text-white opacity-90 mt-8 mb-8 sm:px-16 lg:px-48"><span class="mr-2"><i class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60">Fully Customizable</span></span> <span class="mr-2"><i class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60">Completely Free</span></span></p>
+            <img class="mt-8" src="/assets/img/TYPE1.png" draggable="false" alt="Rivvix Showcase">
         </div>
     </section>
 
-    <footer class="footerBox fade">
+    <footer class="footerBox">
         <div class="footerContent">
-            <img src="https://cdn.discordapp.com/avatars/909515934400643112/7c924b5e409264fd02207b87ae275d64.png" alt="Dev Profile Picture">
+            <img src="https://i.imgur.com/t6LlBb0.png" alt="Rivvix Logo">
             <div class="devText">
-                <p class="text-lg">Dev ZayDocs</p>
-                <p class="text-sm">All rights reserved.</p>
+                <p class="text-lg font-semibold">Developer: ZayDocs</p>
+                <p class="text-sm">ID: 909515934400643112</p>
             </div>
         </div>
     </footer>
