@@ -55,6 +55,44 @@
         .coloredBg {
             background-color: #000000; /* Black background */
         }
+
+        .footerBox {
+            background: rgba(65, 105, 225, 0.8); /* Semi-transparent Royal Blue */
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            color: #ffffff;
+        }
+
+        .footerContent {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .footerContent img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .footerContent .devText {
+            text-align: center;
+        }
+
+        .fade {
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -67,7 +105,7 @@
                 <span class="regularTextBold text-white self-center whitespace-nowrap">Rivvix</span>
             </a>
             <div class="flex md:order-2">
-                <a href="/invite" target="_blank"><button type="button"
+                <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&permissions=28580859346423&integration_type=0&scope=bot+applications.commands" target="_blank"><button type="button"
                         class="normalTextBold text-black gradientBg rounded-full px-6 py-3 text-center mr-3 md:mr-0"><i class="fa-brands fa-discord mr-2"></i> Add to Server</button></a>
                 <button data-collapse-toggle="navbar-sticky" type="button"
                     class="inline-flex items-center p-2 text-white rounded-xl md:hidden coloredBg aria-controls="
@@ -108,7 +146,7 @@
             </h1>
             <p class="regularText opacity-90 mt-8 mb-8 sm:px-16 lg:px-48">Rivvix is the one-stop solution for all your server's needs, packed with features like moderation, music, giveaways, and much more.</p>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                <a href="/invite" target="_blank"
+                <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&permissions=28580859346423&integration_type=0&scope=bot+applications.commands" target="_blank"
                     class="normalTextBold text-black gradientBg inline-flex justify-center items-center py-3 px-6 text-center rounded-full">
                     Add to Server
                     <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
@@ -118,42 +156,55 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </a>
-                <a href="#features"
-                    class="normalTextBold text-white secBg opacity-60 hover:opacity-100 inline-flex justify-center items-center py-3 px-6 text-center rounded-full">
-                    Features
-                </a>
-            </div>
-            <p class="smallText text-white opacity-90 mt-8 mb-8 sm:px-16 lg:px-48"><span class="mr-2"><i
-                        class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60">Fully Customizable</span></span> <span class="mr-2"><i
-                        class="fa-regular fa-check mr-1 opacity-90"></i>
-                    <span class="opacity-60">Completely Free</span></span></p>
-            <img class="mt-8" src="https://i.imgur.com/t6LlBb0.png" draggable="false" alt="Rivvix Showcase">
-        </div>
-    </section>
-
-    <section id="features" class="py-8 px-4 mx-auto max-w-6xl text-center lg:py-16">
-        <h2 class="blackText mb-4 tracking-tight leading-none">Features</h2>
-        <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-            <div class="flex-1">
-                <img src="https://i.imgur.com/KkOTe2t.png" alt="Ticket Feature" class="w-full h-auto">
-                <h3 class="regularTextBold mt-4 mb-2">Ticket System</h3>
-                <p class="regularText opacity-90">Manage and track support tickets efficiently with Rivvix's integrated ticket system.</p>
-            </div>
-            <div class="flex-1">
-                <img src="https://i.imgur.com/FQdjaTl.png" alt="Moderation Feature" class="w-full h-auto">
-                <h3 class="regularTextBold mt-4 mb-2">Moderation</h3>
-                <p class="regularText opacity-90">Keep your server safe and well-managed with powerful moderation tools and features.</p>
-            </div>
-            <div class="flex-1">
-                <img src="https://i.imgur.com/ebxq5qz.png" alt="Giveaway Feature" class="w-full h-auto">
-                <h3 class="regularTextBold mt-4 mb-2">Giveaways</h3>
-                <p class="regularText opacity-90">Create and manage exciting giveaways effortlessly with Rivvix's giveaway system.</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 px-4 mx-auto max-w-6xl text-center">
-        <div class="text-white opacity-60">© 2024 Rivvix. All rights reserved.</div>
+    <section class="section gradientBg">
+        <div class="py-8 px-4 mx-auto max-w-6xl text-center lg:py-16">
+            <h2 class="blackText mb-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Why Choose Rivvix?</h2>
+            <p class="normalText whiteUnderline">Our bot is designed to make your server management easy and fun. With top-notch security, a user-friendly interface, and a suite of customizable features, Rivvix is the perfect addition to your Discord server.</p>
+            <div class="mt-8 flex flex-wrap justify-center gap-8">
+                <span class="inline-flex items-center text-white"><i class="fa-solid fa-shield-alt mr-2 opacity-90"></i> <span class="opacity-60">100% Secure</span></span>
+                <span class="inline-flex items-center text-white"><i class="fa-regular fa-check mr-2 opacity-90"></i> <span class="opacity-60">Completely Free</span></span>
+            </div>
+            <img class="mt-8" src="https://i.imgur.com/TYPE1.png" draggable="false" alt="Rivvix Showcase">
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="py-8 px-4 mx-auto max-w-6xl text-center lg:py-16">
+            <hr class="customHr">
+            <div class="flex flex-wrap justify-center gap-8 mt-8">
+                <div class="flex-1">
+                    <img src="https://i.imgur.com/KkOTe2t.png" alt="Ticket Feature" class="w-full h-auto">
+                    <h3 class="regularTextBold mt-4 mb-2">Ticket System</h3>
+                    <p class="regularText opacity-90">Manage and track support tickets efficiently with Rivvix's integrated ticket system.</p>
+                </div>
+                <div class="flex-1">
+                    <img src="https://i.imgur.com/FQdjaTl.png" alt="Moderation Feature" class="w-full h-auto">
+                    <h3 class="regularTextBold mt-4 mb-2">Moderation</h3>
+                    <p class="regularText opacity-90">Keep your server safe and well-managed with powerful moderation tools and features.</p>
+                </div>
+                <div class="flex-1">
+                    <img src="https://i.imgur.com/ebxq5qz.png" alt="Giveaway Feature" class="w-full h-auto">
+                    <h3 class="regularTextBold mt-4 mb-2">Giveaways</h3>
+                    <p class="regularText opacity-90">Create and manage exciting giveaways effortlessly with Rivvix's giveaway system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footerBox fade">
+        <div class="py-8 px-4 mx-auto max-w-6xl text-center">
+            <div class="footerContent">
+                <img src="https://cdn.discordapp.com/avatars/909515934400643112/9d17dcae1a8d9d8b23fc376b263ddc40.png" alt="Dev ZayDocs">
+                <div class="devText">
+                    <div class="text-white font-semibold">Dev ZayDocs</div>
+                    <div class="text-white text-sm">ID: 909515934400643112</div>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>
