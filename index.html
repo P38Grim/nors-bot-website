@@ -131,22 +131,12 @@
             color: white;
         }
 
-        .section h1,
-        .section h2 {
-            font-family: 'Caveat', cursive;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
         .section h1 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
             color: #93C5FD;
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #93C5FD;
+            font-family: 'Caveat', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .section p {
@@ -156,80 +146,49 @@
             font-family: 'Patrick Hand', cursive;
         }
 
+        .featuresImages {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .featuresImages img {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            margin: 1.5rem;
+            border: 4px solid #0033A0; /* Royal blue */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .featuresImages img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
         .button-group {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
 
         .button-group a {
+            padding: 1rem 2rem;
             background-color: #4169E1;
             color: white;
-            padding: 10px 20px;
             border-radius: 8px;
-            text-decoration: none;
             font-weight: bold;
-            font-family: 'Patrick Hand', cursive;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s;
+            font-family: 'Caveat', cursive;
+            font-size: 1.2rem;
         }
 
         .button-group a:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-
-        .features {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .features img {
-            max-width: 150px; /* Smaller box size */
-            width: 100%;
-            height: auto;
-            border: 5px solid #0033A0; /* Royal blue border */
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin: 1rem;
-        }
-
-        .features img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .developers {
-            padding: 3rem 1.5rem;
-            text-align: center;
-        }
-
-        .developer-images {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-
-        .developer-images img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border: 3px solid #0033A0; /* Royal blue border */
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .developer-images img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .developer-names {
-            font-size: 1.2rem;
-            color: #E5E7EB;
-            font-family: 'Patrick Hand', cursive;
+            background-color: #2e58c1;
         }
 
         footer {
@@ -237,27 +196,48 @@
             padding: 0.75rem 0.5rem;
             color: white;
             text-align: center;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        footer img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        footer p {
-            margin: 0;
+            font-size: 1rem;
             font-family: 'Patrick Hand', cursive;
         }
 
-        .blue-text {
-            color: #0033A0; /* Royal blue color */
-            font-weight: bold;
+        footer img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+        footer p {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .developers {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .developer {
+            text-align: center;
+        }
+
+        .developer img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+            border: 4px solid #0033A0; /* Royal blue */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .developer p {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.2rem;
+            margin: 0;
+            color: #E5E7EB;
         }
     </style>
 </head>
@@ -273,8 +253,8 @@
         <div class="nav-links">
             <a href="#top">Home</a>
             <a href="#features">Features</a>
-            <a href="#developers">Developers</a>
             <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Support</a>
+            <a href="https://top.gg/bot/1087160815431458946/vote" target="_blank">Vote</a>
         </div>
     </nav>
 
@@ -283,38 +263,35 @@
         <p>Elevate Your Server with Rivvix</p>
         <p>Rivvix provides a comprehensive suite of features to enhance your Discord experience, from moderation and music to giveaways and more.</p>
         <div class="button-group">
-            <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&scope=bot" target="_blank">Invite Rivvix</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&permissions=28580859346423&integration_type=0&scope=bot+applications.commands" target="_blank">Invite Rivvix</a>
             <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Support</a>
-            <a href="https://top.gg/bot/1087160815431458946/vote" target="_blank">Vote on top.gg</a>
+            <a href="https://top.gg/bot/1087160815431458946/vote" target="_blank">Vote</a>
         </div>
-    </section>
-
-    <section id="features" class="section">
-        <h2>Features</h2>
-        <div class="features">
-            <img src="assets/feature1.png" alt="Music Feature">
-            <img src="assets/feature2.png" alt="Moderation Feature">
-            <img src="assets/feature3.png" alt="Giveaway Feature">
-        </div>
-    </section>
-
-    <section id="developers" class="section">
-        <h2>Meet the Developers</h2>
-        <div class="developer-images">
-            <div class="developer">
-                <img src="https://i.imgur.com/t6LlBb0.png" alt="ZayDocs">
-                <p class="developer-names">ZayDocs</p>
+        <section class="section">
+            <h2>Features</h2>
+            <div class="featuresImages">
+                <img src="assets/feature1.png" alt="Feature 1">
+                <img src="assets/feature2.png" alt="Feature 2">
+                <img src="assets/feature3.png" alt="Feature 3">
             </div>
-            <div class="developer">
-                <img src="https://i.imgur.com/El3PQxp.png" alt="Hydro">
-                <p class="developer-names">Hydro</p>
+        </section>
+        <section class="section">
+            <h2>Meet the Developers</h2>
+            <div class="developers">
+                <div class="developer">
+                    <img src="https://i.imgur.com/t6LlBb0.png" alt="ZayDocs">
+                    <p>ZayDocs</p>
+                </div>
+                <div class="developer">
+                    <img src="https://i.imgur.com/El3PQxp.png" alt="Hydro">
+                    <p>Hydro</p>
+                </div>
             </div>
-        </div>
+        </section>
     </section>
 
     <footer>
-        <img src="https://i.imgur.com/t6LlBb0.png" alt="Rivvix Logo">
-        <p class="blue-text">© Rivvix - 2024</p>
+        <p>&copy; Rivvix - 2024</p>
     </footer>
 
     <script>
