@@ -150,21 +150,22 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .featuresImages img {
-            max-width: 300px;
+            max-width: 350px;
             width: 100%;
             height: auto;
-            margin: 1rem;
-            border: 2px solid #4169E1;
-            border-radius: 0;
-            transition: transform 0.3s;
+            border: 5px solid #0033A0; /* Royal blue border */
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .featuresImages img:hover {
             transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         .button-group {
@@ -195,20 +196,26 @@
             color: white;
             text-align: center;
             font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
         }
 
         footer img {
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            margin-right: 0.5rem;
-            vertical-align: middle;
         }
 
         footer p {
-            display: inline-block;
             margin: 0;
             font-family: 'Patrick Hand', cursive;
+        }
+
+        .blue-text {
+            color: #0033A0; /* Royal blue color */
+            font-weight: bold;
         }
     </style>
 </head>
@@ -232,15 +239,10 @@
         <h1>The Ultimate All-in-One Discord Bot</h1>
         <p>Elevate Your Server with Rivvix</p>
         <p>Rivvix provides a comprehensive suite of features to enhance your Discord experience, from moderation and music to giveaways and more.</p>
-        <p><strong>38+</strong> Guilds | <strong>1800+</strong> Users | <strong>1400</strong> Channels</p>
         <div class="button-group">
             <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&permissions=28580859346423&integration_type=0&scope=bot+applications.commands" target="_blank">Add to Server</a>
             <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Support</a>
         </div>
-    </section>
-
-    <section id="features" class="section">
-        <h1>Features</h1>
         <div class="featuresImages">
             <img src="https://i.imgur.com/fjwJU1w.png" alt="Ticket Feature">
             <img src="https://i.imgur.com/DIkiTE7.png" alt="Moderation Feature">
@@ -249,7 +251,8 @@
     </section>
 
     <footer>
-        <p>Developer: <img src="https://i.imgur.com/t6LlBb0.png" alt="Rivvix Logo"> ZayDocs | ID: 909515934400643112</p>
+        <img src="https://i.imgur.com/t6LlBb0.png" alt="Rivvix Logo">
+        <p><span class="blue-text">ZayDocs</span> | 909515934400643112</p>
     </footer>
 
     <script>
