@@ -11,209 +11,251 @@
     <meta name="og:description" content="The ultimate all-in-one Discord bot designed to elevate your server experience.">
     <meta property="og:image" content="https://i.imgur.com/t6LlBb0.png">
     <meta property="og:url" content="/">
-    <meta name="theme-color" content="#4169E1"> <!-- Royal Blue -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta name="theme-color" content="#4169E1">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background: linear-gradient(45deg, #000000, #4169E1); /* Black to Royal Blue gradient */
-            animation: fadeBackground 10s ease infinite;
-            margin: 0;
-            padding: 0;
-        }
-
-        @keyframes fadeBackground {
+        @keyframes gradientAnimation {
             0% {
-                background: linear-gradient(45deg, #000000, #4169E1);
+                background-position: 0% 0%;
             }
             50% {
-                background: linear-gradient(45deg, #4169E1, #000000);
+                background-position: 100% 100%;
             }
             100% {
-                background: linear-gradient(45deg, #000000, #4169E1);
+                background-position: 0% 0%;
             }
+        }
+
+        body {
+            background: linear-gradient(45deg, #2E58C1, #1C1C1C, #4169E1, #2E58C1);
+            background-size: 400% 400%;
+            animation: gradientAnimation 8s ease infinite;
+            margin: 0;
+            padding: 0;
+            font-family: 'Patrick Hand', cursive;
         }
 
         .blackBar {
-            background-color: #000000; /* Black bar */
+            background-color: #000000;
             padding: 0.5rem;
             color: #ffffff;
-        }
-
-        .gradientBg {
-            background: linear-gradient(45deg, #4169E1, #000000); /* Royal blue to black gradient */
-        }
-
-        .normalTextBold, .blackText, .boldText, .extraBoldText {
-            color: #4169E1; /* Royal Blue text */
-        }
-
-        .normalText, .regularText, .regularTextIta {
-            color: #FFFFFF; /* White text */
-        }
-
-        .whiteUnderline {
-            text-decoration-color: #4169E1; /* Royal Blue underline */
-        }
-
-        .customHr {
-            border: 1px solid #4169E1; /* Royal Blue horizontal line */
-        }
-
-        .secBg {
-            background-color: #4169E1; /* Royal Blue background */
-        }
-
-        .coloredBg {
-            background-color: #000000; /* Black background */
-        }
-
-        .footerBox {
-            background: linear-gradient(45deg, #000000, #4169E1); /* Black to Royal Blue gradient */
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            color: #ffffff;
-        }
-
-        .footerContent {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .footerContent img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-
-        .footerContent .devText {
+            font-size: 1rem;
+            font-weight: bold;
+            font-family: 'Caveat', cursive;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid #4169E1;
         }
 
-        .fade {
-            animation: fadeIn 2s ease-out;
+        nav {
+            background-color: #000000;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: 'Patrick Hand', cursive;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .featuresImages img {
-            max-width: 100%;
-            height: auto;
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
             display: block;
-            margin: 0 auto;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #4169E1;
+        }
+
+        .menu-button {
+            background-color: #4169E1;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Caveat', cursive;
+            display: none;
+        }
+
+        .menu-button:focus {
+            outline: none;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links a {
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-button {
+                display: inline-block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #000000;
+                width: 100%;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            .nav-links a {
+                margin: 10px 0;
+                font-size: 1.1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
         }
 
         .section {
-            padding: 4rem 1rem;
+            padding: 2rem 1rem;
             text-align: center;
+            color: white;
         }
 
-        .section img {
-            margin-top: 2rem;
-            max-width: 100%;
+        .section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4169E1;
+            font-family: 'Caveat', cursive;
         }
 
-        .supportBtn {
-            background-color: #000000; /* Black background */
-            color: #4169E1; /* Royal Blue text */
-            border: 2px solid #4169E1; /* Royal Blue border */
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
+        .section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            font-family: 'Patrick Hand', cursive;
+        }
+
+        .featuresImages {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .featuresImages img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin: 1rem;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .featuresImages img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .button-group a {
+            padding: 0.8rem 1.5rem;
+            background-color: #4169E1;
+            color: white;
+            border-radius: 8px;
             font-weight: bold;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s;
+            font-family: 'Caveat', cursive;
+            font-size: 1.1rem;
         }
 
-        .supportBtn:hover {
-            background-color: #4169E1; /* Royal Blue background */
-            color: #ffffff; /* White text */
+        .button-group a:hover {
+            background-color: #2e58c1;
+        }
+
+        footer {
+            background: linear-gradient(45deg, #000000, #333333);
+            padding: 1.5rem 1rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        footer img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            transition: transform 0.3s;
+        }
+
+        footer img:hover {
+            transform: scale(1.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1rem;
         }
     </style>
 </head>
 
-<body class="container mx-auto">
+<body>
 
-    <div class="blackBar text-center">
-        <span>Welcome to Rivvix - The Ultimate Discord Bot</span>
+    <div class="blackBar">
+        Welcome to Rivvix - The Ultimate Discord Bot
     </div>
 
-    <nav class="sticky w-full z-20 top-0 left-0">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="/" class="flex items-center">
-                <img src="https://i.imgur.com/t6LlBb0.png" draggable="false" class="h-7 mr-3" alt="Rivvix Logo">
-                <span class="normalTextBold text-white self-center whitespace-nowrap">Rivvix</span>
-            </a>
-            <div class="flex md:order-2">
-                <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&permissions=28580859346423&integration_type=0&scope=bot+applications.commands" target="_blank">
-                    <button type="button" class="normalTextBold text-black gradientBg rounded-full px-6 py-3 text-center mr-3 md:mr-0">
-                        <i class="fa-brands fa-discord mr-2"></i> Add to Server
-                    </button>
-                </a>
-                <a href="https://discord.com/invite/EHTaYeASUU" target="_blank" class="supportBtn ml-3">
-                    Support
-                </a>
-                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-white rounded-xl md:hidden coloredBg aria-controls="navbar-sticky" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul class="text-white flex flex-col p-4 md:p-0 mt-4 border border-gray-800 rounded-xl md:flex-row md:space-x-8 md:mt-0 md:border-0">
-                    <li><a href="#top" class="normalText text-white whiteUnderline block py-2 pl-3 pr-6 rounded md:hover:bg-transparent md:p-0"><i class="fa-regular fa-house-blank"></i></a></li>
-                    <li><a href="#features" class="normalText text-white whiteUnderline block py-2 pl-3 pr-6 rounded md:hover:bg-transparent md:p-0">Features</a></li>
-                    <li><a href="https://discord.com/invite/EHTaYeASUU" target="_blank" class="normalText text-white whiteUnderline block py-2 pl-3 pr-6 rounded md:hover:bg-transparent md:p-0">Support</a></li>
-                </ul>
-            </div>
+    <nav>
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <div class="nav-links">
+            <a href="#top">Home</a>
+            <a href="#features">Features</a>
+            <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Support</a>
         </div>
     </nav>
 
     <section id="top" class="section">
-        <div class="py-8 px-4 mx-auto max-w-6xl">
-            <h1 class="blackText mb-4 tracking-tight leading-none">The Ultimate All-in-One Discord Bot <span class="gradientBg">Elevate Your Server</span> with Rivvix.</h1>
-            <p class="normalText opacity-90 mt-8 mb-8">Rivvix provides a comprehensive suite of features to enhance your Discord experience, from moderation and music to giveaways and more.</p>
-            <div class="flex justify-center gap-4 mb-8">
-                <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&permissions=28580859346423&integration_type=0&scope=bot+applications.commands" target="_blank" class="normalTextBold text-black gradientBg inline-flex justify-center items-center py-3 px-6 text-center rounded-full">
-                    Add to Server
-                    <svg class="ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.293 14.293a1 1 0 001.414 0L12 12.414l3.293 3.293a1 1 0 001.414-1.414L13.414 12l3.293-3.293a1 1 0 10-1.414-1.414L12 10.586 8.707 7.293a1 1 0 00-1.414 1.414L10.586 12l-3.293 3.293a1 1 0 000 1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-                <a href="https://discord.com/invite/EHTaYeASUU" target="_blank" class="supportBtn">
-                    Support
-                </a>
-            </div>
-            <p class="smallText text-white opacity-90 mt-8 mb-8 sm:px-16 lg:px-48"><span class="mr-2"><i class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60">Fully Customizable</span></span> <span class="mr-2"><i class="fa-regular fa-check mr-1 opacity-90"></i> <span class="opacity-60">Completely Free</span></span></p>
-            <div class="featuresImages">
-                <img src="https://i.imgur.com/KkOTe2t.png" alt="Ticket Feature">
-                <img src="https://i.imgur.com/FQdjaTl.png" alt="Moderation Feature">
-                <img src="https://i.imgur.com/ebxq5qz.png" alt="Giveaway Feature">
-            </div>
+        <h1>The Ultimate All-in-One Discord Bot</h1>
+        <p>Elevate Your Server with Rivvix</p>
+        <p>Rivvix provides a comprehensive suite of features to enhance your Discord experience, from moderation and music to giveaways and more.</p>
+        <div class="button-group">
+            <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&permissions=28580859346423&integration_type=0&scope=bot+applications.commands" target="_blank">Add to Server</a>
+            <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Support</a>
+        </div>
+        <div class="featuresImages">
+            <img src="https://i.imgur.com/fjwJU1w.png" alt="Ticket Feature">
+            <img src="https://i.imgur.com/DIkiTE7.png" alt="Moderation Feature">
+            <img src="https://i.imgur.com/hr6ffcp.png" alt="Giveaway Feature">
         </div>
     </section>
 
-    <footer class="footerBox">
-        <div class="footerContent">
-            <img src="https://i.imgur.com/t6LlBb0.png" alt="Rivvix Logo">
-            <div class="devText">
-                <p class="text-lg font-semibold">Developer: ZayDocs</p>
-                <p class="text-sm">ID: 909515934400643112</p>
-            </div>
-        </div>
+    <footer>
+        <img src="https://i.imgur.com/t6LlBb0.png" alt="Rivvix Logo">
+        <p class="text-lg font-semibold">Developer: ZayDocs</p>
+        <p class="text-sm">ID: 909515934400643112</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
 </body>
 
