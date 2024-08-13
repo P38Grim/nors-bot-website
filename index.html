@@ -18,35 +18,33 @@
     <style>
         @keyframes gradientAnimation {
             0% {
-                background-position: 0% 0%;
+                background-position: 0% 50%;
             }
             50% {
-                background-position: 100% 100%;
+                background-position: 100% 50%;
             }
             100% {
-                background-position: 0% 0%;
+                background-position: 0% 50%;
             }
         }
 
         body {
-            background: linear-gradient(45deg, #2E58C1, #1C1C1C, #4169E1, #2E58C1);
-            background-size: 400% 400%;
-            animation: gradientAnimation 8s ease infinite;
+            background: linear-gradient(45deg, #1E3A8A, #111827, #2C5282, #1E3A8A);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
             margin: 0;
             padding: 0;
             font-family: 'Patrick Hand', cursive;
+            color: #E5E7EB;
         }
 
         .blackBar {
             background-color: #000000;
             padding: 0.5rem;
             color: #ffffff;
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: bold;
             font-family: 'Caveat', cursive;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            border-bottom: 2px solid #4169E1;
         }
 
         nav {
@@ -55,7 +53,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             font-family: 'Patrick Hand', cursive;
         }
 
@@ -66,23 +64,27 @@
             padding: 0.5rem 1rem;
             display: block;
             transition: color 0.3s;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         nav a:hover {
-            color: #4169E1;
+            color: #93C5FD;
+        }
+
+        nav .menu-button {
+            display: none;
         }
 
         .menu-button {
             background-color: #4169E1;
             border: none;
             color: white;
-            padding: 10px 15px;
-            font-size: 20px;
+            padding: 12px 20px;
+            font-size: 24px;
             border-radius: 8px;
+            display: none;
             cursor: pointer;
             font-family: 'Caveat', cursive;
-            display: none;
         }
 
         .menu-button:focus {
@@ -96,7 +98,7 @@
         }
 
         .nav-links a {
-            margin: 0 10px;
+            margin: 0 15px;
         }
 
         @media (max-width: 768px) {
@@ -114,8 +116,8 @@
             }
 
             .nav-links a {
-                margin: 10px 0;
-                font-size: 1.1rem;
+                margin: 15px 0;
+                font-size: 1.2rem;
             }
 
             .nav-links.active {
@@ -124,22 +126,23 @@
         }
 
         .section {
-            padding: 2rem 1rem;
+            padding: 3rem 1.5rem;
             text-align: center;
             color: white;
         }
 
         .section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #4169E1;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #93C5FD;
             font-family: 'Caveat', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            color: #E5E7EB;
             font-family: 'Patrick Hand', cursive;
         }
 
@@ -147,39 +150,39 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 2rem;
         }
 
         .featuresImages img {
-            max-width: 300px;
+            max-width: 350px;
             width: 100%;
             height: auto;
-            margin: 1rem;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 1.5rem;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         .featuresImages img:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         .button-group {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
         .button-group a {
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 2rem;
             background-color: #4169E1;
             color: white;
             border-radius: 8px;
             font-weight: bold;
             transition: background-color 0.3s;
             font-family: 'Caveat', cursive;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         .button-group a:hover {
@@ -187,36 +190,32 @@
         }
 
         footer {
-            background: linear-gradient(45deg, #000000, #333333);
-            padding: 1.5rem 1rem;
+            background-color: #000000;
+            padding: 0.75rem 0.5rem;
             color: white;
             text-align: center;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 0.9rem;
         }
 
         footer img {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
-            margin-bottom: 1rem;
-            transition: transform 0.3s;
-        }
-
-        footer img:hover {
-            transform: scale(1.1);
+            margin-right: 0.5rem;
+            vertical-align: middle;
         }
 
         footer p {
+            display: inline-block;
             margin: 0;
             font-family: 'Patrick Hand', cursive;
-            font-size: 1rem;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="blackBar">
+    <div class="blackBar text-center">
         Welcome to Rivvix - The Ultimate Discord Bot
     </div>
 
@@ -246,8 +245,7 @@
 
     <footer>
         <img src="https://i.imgur.com/t6LlBb0.png" alt="Rivvix Logo">
-        <p class="text-lg font-semibold">Developer: ZayDocs</p>
-        <p class="text-sm">ID: 909515934400643112</p>
+        <p>Developer: ZayDocs | ID: 909515934400643112</p>
     </footer>
 
     <script>
