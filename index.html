@@ -168,26 +168,45 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .button-group {
+        .developers {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .developers h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #93C5FD;
+            font-family: 'Caveat', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .developer-images {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
+            margin-bottom: 2rem;
         }
 
-        .button-group a {
-            padding: 1rem 2rem;
-            background-color: #4169E1;
-            color: white;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            font-family: 'Caveat', cursive;
+        .developer-images img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid #0033A0; /* Royal blue border */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .developer-images img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .developer-names {
             font-size: 1.2rem;
-        }
-
-        .button-group a:hover {
-            background-color: #2e58c1;
+            color: #E5E7EB;
+            font-family: 'Patrick Hand', cursive;
         }
 
         footer {
@@ -231,6 +250,7 @@
         <div class="nav-links">
             <a href="#top">Home</a>
             <a href="#features">Features</a>
+            <a href="#developers">Developers</a>
             <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Support</a>
         </div>
     </nav>
@@ -246,13 +266,36 @@
         <div class="featuresImages">
             <img src="https://i.imgur.com/fjwJU1w.png" alt="Ticket Feature">
             <img src="https://i.imgur.com/DIkiTE7.png" alt="Moderation Feature">
-            <img src="https://i.imgur.com/hr6ffcp.png" alt="Giveaway Feature">
+            <img src="https://i.imgur.com/qDPnC1r.png" alt="Giveaway Feature">
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <h1>Features</h1>
+        <div class="featuresImages">
+            <img src="https://i.imgur.com/4f1MD7e.png" alt="Feature 1">
+            <img src="https://i.imgur.com/l9cf05D.png" alt="Feature 2">
+            <img src="https://i.imgur.com/8Ym2D2A.png" alt="Feature 3">
+        </div>
+    </section>
+
+    <section id="developers" class="developers">
+        <h2>Meet the Developers</h2>
+        <div class="developer-images">
+            <div class="developer">
+                <img src="https://i.imgur.com/t6LlBb0.png" alt="ZayDocs">
+                <p class="developer-names">ZayDocs</p>
+            </div>
+            <div class="developer">
+                <img src="https://i.imgur.com/El3PQxp.png" alt="Hydro">
+                <p class="developer-names">Hydro</p>
+            </div>
         </div>
     </section>
 
     <footer>
         <img src="https://i.imgur.com/t6LlBb0.png" alt="Rivvix Logo">
-        <p><span class="blue-text">ZayDocs</span> | 909515934400643112</p>
+        <p class="blue-text">ZayDocs | 909515934400643112</p>
     </footer>
 
     <script>
@@ -261,7 +304,6 @@
             navLinks.classList.toggle('active');
         }
     </script>
-
 </body>
 
 </html>
