@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rivvix</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/t6LlBb0.png">
     <meta property="og:title" content="Rivvix">
     <meta name="og:description" content="The ultimate all-in-one Discord bot designed to elevate your server experience.">
-    <meta property="og:image" content="assets/img/og-image.png">
+    <meta property="og:image" content="https://i.imgur.com/t6LlBb0.png">
     <meta property="og:url" content="/">
     <meta name="theme-color" content="#4169E1">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -191,50 +191,50 @@
             background-color: #2e58c1;
         }
 
-        footer {
+        .footer {
             background-color: #000000;
-            padding: 1rem;
+            padding: 1rem 0.5rem;
             color: white;
             text-align: center;
             font-size: 1rem;
             font-family: 'Patrick Hand', cursive;
         }
 
-        footer img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin: 0 auto;
-            display: block;
-            border: 4px solid #0033A0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .footer img {
+            max-width: 100%;
+            height: auto;
+            border: none;
         }
 
-        footer p {
+        .footer p {
+            display: inline-block;
             margin: 0;
         }
 
         .developers {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
             margin-top: 2rem;
-            text-align: center;
         }
 
         .developer {
-            display: inline-block;
-            margin: 0 1.5rem;
+            text-align: center;
         }
 
         .developer img {
             width: 120px;
             height: 120px;
             border-radius: 50%;
+            margin-bottom: 0.5rem;
             border: 4px solid #0033A0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .developer p {
             font-family: 'Patrick Hand', cursive;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            margin: 0;
             color: #E5E7EB;
         }
     </style>
@@ -276,31 +276,30 @@
         </div>
     </section>
 
-    <section id="developers" class="section">
-        <h1>Developers</h1>
-        <div class="developers">
-            <div class="developer">
-                <img src="https://i.imgur.com/t6LlBb0.png" alt="ZayDocs">
-                <p>ZayDocs</p>
-            </div>
-            <div class="developer">
-                <img src="https://i.imgur.com/El3PQxp.png" alt="Hydro">
-                <p>Hydro</p>
-            </div>
+    <section class="developers">
+        <div class="developer">
+            <img src="https://i.imgur.com/t6LlBb0.png" alt="ZayDocs">
+            <p>ZayDocs</p>
+        </div>
+        <div class="developer">
+            <img src="https://i.imgur.com/El3PQxp.png" alt="Hydro">
+            <p>Hydro</p>
         </div>
     </section>
 
-    <footer>
-        <p>© Rivvix - 2024 All Rights Reserved</p>
+    <footer class="footer">
+        <p>&copy; Rivvix - 2024 All rights reserved</p>
+        <div class="footer-widget">
+            <img src="https://top.gg/api/widget/1087160815431458946.svg" alt="Top.gg Widget">
+        </div>
     </footer>
 
     <script>
         function toggleMenu() {
-            const menuLinks = document.querySelector('.nav-links');
-            menuLinks.classList.toggle('active');
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
         }
     </script>
-
 </body>
 
 </html>
