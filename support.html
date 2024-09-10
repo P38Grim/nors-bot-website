@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivvix - Support</title>
+    <link rel="icon" type="image/png" href="https://i.imgur.com/t6LlBb0.png">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #000000);
+            background-size: 200% 200%;
+            animation: gradientAnimation 15s ease infinite;
+            color: #E5E7EB;
+            font-family: 'Arial', sans-serif;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .navbar {
+            background-color: #000000;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #93C5FD;
+        }
+
+        .section {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #93C5FD;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section h1::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50%;
+            height: 2px;
+            background-color: #93C5FD;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            color: #E5E7EB;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer {
+            background-color: #000000;
+            padding: 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #93C5FD;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="docs.html">Docs</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="vote.html">Vote</a>
+        <a href="invite.html">Invite</a>
+        <a href="support.html">Support</a>
+    </nav>
+
+    <section class="section">
+        <h1>Support</h1>
+        <div class="info-box">
+            <p>If you need assistance with Rivvix, here are some ways to get support:</p>
+            <ul>
+                <li><strong>Join our Support Server:</strong> <a href="https://discord.com/invite/nqQRXQv9jq" target="_blank">Click here to join</a></li>
+                <li><strong>Email us:</strong> <a href="mailto:fuelexbot@gmail.com">fuelexbot@gmail.com</a></li>
+            </ul>
+            <p>For any immediate issues or questions, feel free to reach out to us through these channels. We're here to help!</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Made by ZayDocs | Rivvix Team</p>
+    </footer>
+
+</body>
+
+</html>
