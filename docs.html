@@ -127,26 +127,27 @@
             text-decoration: underline;
         }
 
-        .dropdown {
-            display: flex;
-            justify-content: center;
-            margin: 2rem 0;
-        }
-
-        .dropdown select {
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            border: 1px solid #93C5FD;
-            background: #2B2D2F;
+        .docs-link-box {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             color: #E5E7EB;
-            font-size: 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .dropdown select option {
-            background: #2B2D2F;
-            color: #E5E7EB;
+        .docs-link-box a {
+            color: #93C5FD;
+            text-decoration: none;
+            font-weight: bold;
         }
 
+        .docs-link-box a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -167,21 +168,6 @@
 
     <section id="categories" class="section">
         <h1>Categories</h1>
-        <div class="dropdown">
-            <select id="category-dropdown">
-                <option value="" disabled selected>Select a Category</option>
-                <option value="information">Information</option>
-                <option value="music">Music</option>
-                <option value="moderation">Moderation</option>
-                <option value="utility">Utility</option>
-                <option value="fun">Fun</option>
-                <option value="ticket">Ticket</option>
-                <option value="setup">Setup</option>
-                <option value="giveaway">Giveaway</option>
-                <option value="economy">Economy</option>
-                <option value="premium">Premium</option>
-            </select>
-        </div>
         <div class="category-box">
             <img src="https://cdn.discordapp.com/emojis/1272397030291017830.png" alt="Category">
             <h2>Information</h2>
@@ -239,58 +225,48 @@
         <div class="feature-box">
             <img src="https://cdn.discordapp.com/emojis/1272390188659638384.png" alt="Feature">
             <h2>Comprehensive Logging</h2>
-            <p class="text-typewriter">Track and log server activities with detailed reports.</p>
-        </div>
-        <div class="feature-box">
-            <img src="https://cdn.discordapp.com/emojis/1272441718519631884.png" alt="Feature">
-            <h2>Advanced Moderation</h2>
-            <p class="text-typewriter">Robust moderation tools to keep your server in check.</p>
+            <p class="text-typewriter">Keep track of every important event in your server.</p>
         </div>
         <div class="feature-box">
             <img src="https://cdn.discordapp.com/emojis/1272453729429491782.png" alt="Feature">
-            <h2>Poll System</h2>
-            <p class="text-typewriter">Create and manage polls easily with interactive options.</p>
-        </div>
-        <div class="feature-box">
-            <img src="https://cdn.discordapp.com/emojis/1257834132734738523.png" alt="Feature">
-            <h2>Giveaways</h2>
-            <p class="text-typewriter">Run engaging giveaways with customizable options.</p>
-        </div>
-        <div class="feature-box">
-            <img src="https://cdn.discordapp.com/emojis/1272389941497696368.png" alt="Feature">
-            <h2>Comprehensive Information</h2>
-            <p class="text-typewriter">Access detailed information about users, servers, and channels.</p>
+            <h2>Advanced Moderation</h2>
+            <p class="text-typewriter">Tools to help you effectively manage and moderate your server.</p>
         </div>
         <div class="feature-box">
             <img src="https://cdn.discordapp.com/emojis/1272442724477304882.png" alt="Feature">
-            <h2>Over 59+ Slash Commands</h2>
-            <p class="text-typewriter">Use a wide range of slash commands for various tasks.</p>
+            <h2>Engaging Giveaways</h2>
+            <p class="text-typewriter">Create and manage giveaways with ease.</p>
         </div>
         <div class="feature-box">
-            <img src="https://cdn.discordapp.com/emojis/1272443254306111568.png" alt="Feature">
-            <h2>100+ Sub Commands</h2>
-            <p class="text-typewriter">Explore numerous sub commands for extended functionality.</p>
+            <img src="https://cdn.discordapp.com/emojis/1272389941497696368.png" alt="Feature">
+            <h2>Customizable Economy</h2>
+            <p class="text-typewriter">Manage server economy with various options.</p>
         </div>
         <div class="feature-box">
             <img src="https://cdn.discordapp.com/emojis/1272390098385637433.png" alt="Feature">
-            <h2>AI Feature</h2>
-            <p class="text-typewriter">Interact with an AI for enhanced server engagement.</p>
+            <h2>Fun Games</h2>
+            <p class="text-typewriter">Add entertainment with a variety of fun games.</p>
         </div>
     </section>
 
     <section id="info" class="section">
         <h1>About Rivvix</h1>
         <div class="info-box">
-            <p><strong>Rivvix</strong> is a powerful Discord bot designed to enhance your server with a multitude of features. From managing server activities with join/leave logging and an anti-alt system to engaging members with music, fun commands, and giveaways, Rivvix offers an all-in-one solution for server management. With over 59+ slash commands and 100+ sub commands, plus an advanced AI feature, Rivvix is tailored to meet all your server needs.</p>
+            <img src="https://i.imgur.com/FjLWg0H.png" alt="Disclaimer">
+            <h2>Disclaimer & Legal Notices</h2>
+            <p class="text-typewriter">All rights reserved. Please review our terms and conditions carefully.</p>
+        </div>
+        <div class="info-box docs-link-box">
+            <h2>Explore Rivvix Documentation</h2>
+            <p class="text-typewriter">Find detailed guides and setup instructions for Rivvix.</p>
+            <a href="https://rivvix.blossomguard.ca/docs" target="_blank">Visit Documentation</a>
         </div>
     </section>
 
     <footer class="footer">
-        <p>Made by ZayDocs | Rivvix Team</p>
-        <p><a href="https://discord.com/invite/nqQRXQv9jq" target="_blank">Join our Support Server</a></p>
+        <p>Made By ZayDocs | Rivvix Team | <a href="https://discord.com/invite/nqQRXQv9jq" target="_blank">Support Server</a></p>
     </footer>
 
 </body>
 
 </html>
-      
