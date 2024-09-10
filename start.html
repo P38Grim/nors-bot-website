@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - Rivvix</title>
+    <link rel="icon" type="image/png" href="https://i.imgur.com/t6LlBb0.png">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #000000);
+            background-size: 200% 200%;
+            animation: gradientAnimation 15s ease infinite;
+            color: #E5E7EB;
+            font-family: 'Arial', sans-serif;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .navbar {
+            background-color: #000000;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #93C5FD;
+        }
+
+        .section {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #93C5FD;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section h1::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50%;
+            height: 2px;
+            background-color: #93C5FD;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            color: #E5E7EB;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-typewriter {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid #93C5FD;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #93C5FD; }
+        }
+
+        .footer {
+            background-color: #000000;
+            padding: 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #93C5FD;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#top">Home</a>
+        <a href="#setup">Setup</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
+    </nav>
+
+    <section id="top" class="section">
+        <h1>Getting Started with Rivvix</h1>
+        <p class="text-typewriter">Learn how to set up and start using Rivvix, the ultimate Discord bot, with these easy steps.</p>
+    </section>
+
+    <section id="setup" class="section">
+        <h1>Setup Instructions</h1>
+        <div class="info-box">
+            <h2>Step 1: Invite Rivvix to Your Server</h2>
+            <p>Click <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&scope=bot&permissions=8" target="_blank" class="text-typewriter">here</a> to invite Rivvix to your server. Make sure to grant the necessary permissions for Rivvix to function properly.</p>
+        </div>
+        <div class="info-box">
+            <h2>Step 2: Configure Settings</h2>
+            <p>Once Rivvix is in your server, use the <code>/setup</code> command to configure the basic settings. Follow the prompts to set up features like logging, moderation, and more.</p>
+        </div>
+        <div class="info-box">
+            <h2>Step 3: Explore Commands</h2>
+            <p>Use the <code>/help</code> command to view a list of available commands and their descriptions. Check out the <a href="#features" class="text-typewriter">features section</a> to see what Rivvix can do!</p>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <h1>Features</h1>
+        <div class="info-box">
+            <h2>Advanced Moderation</h2>
+            <p>Keep your server in check with Rivvix's robust moderation tools.</p>
+        </div>
+        <div class="info-box">
+            <h2>Comprehensive Logging</h2>
+            <p>Track and log server activities for complete oversight.</p>
+        </div>
+        <div class="info-box">
+            <h2>Interactive Polls</h2>
+            <p>Create and manage polls with ease.</p>
+        </div>
+        <div class="info-box">
+            <h2>Fun and Games</h2>
+            <p>Engage your server members with entertaining commands.</p>
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <h1>FAQ</h1>
+        <div class="info-box">
+            <h2>How do I use the commands?</h2>
+            <p>Type <code>/help</code> to get a list of all available commands and their usage.</p>
+        </div>
+        <div class="info-box">
+            <h2>What permissions does Rivvix need?</h2>
+            <p>Rivvix needs permissions to manage messages, read message history, and more. Ensure the bot has the appropriate permissions for full functionality.</p>
+        </div>
+        <div class="info-box">
+            <h2>Can I customize Rivvix?</h2>
+            <p>Yes, Rivvix offers various customization options through the <code>/setup</code> command.</p>
+        </div>
+    </section>
+
+    <section id="support" class="section">
+        <h1>Support</h1>
+        <div class="info-box">
+            <p>If you need assistance or have any issues, please reach out to us via email at <a href="mailto:fuelexbot@gmail.com" class="text-typewriter">fuelexbot@gmail.com</a> or join our <a href="https://discord.com/invite/nqQRXQv9jq" target="_blank" class="text-typewriter">Support Server</a> for help.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Made by ZayDocs | Rivvix Team</p>
+        <p><a href="https://discord.com/invite/nqQRXQv9jq" target="_blank">Join our Support Server</a></p>
+    </footer>
+
+</body>
+
+</html>
