@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -9,17 +10,17 @@ body {
 }
 
 .blackBar {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 0.5rem;
-    color: #ffffff;
-    font-size: 1.2rem;
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
     font-family: 'Caveat', cursive;
 }
 
 nav {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -27,25 +28,24 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     font-family: 'Patrick Hand', cursive;
     backdrop-filter: blur(10px);
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 nav.scrolled {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 nav a {
-    color: #ffffff;
+    color: #333;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0.5rem 1rem;
     display: block;
     transition: color 0.3s;
-    font-size: 1.1rem;
 }
 
 nav a:hover {
-    color: #93C5FD;
+    color: #4169E1;
 }
 
 .menu-button {
@@ -71,7 +71,13 @@ nav a:hover {
 }
 
 .nav-links a {
-    margin: 0 15px;
+    margin: 0 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #4169E1;
 }
 
 @media (max-width: 768px) {
@@ -82,7 +88,7 @@ nav a:hover {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(255, 255, 255, 0.9);
         width: 100%;
         text-align: center;
         padding-top: 10px;
@@ -98,8 +104,9 @@ nav a:hover {
     }
 }
 
+/* Section Styles */
 .section {
-    padding: 3rem 1.5rem;
+    padding: 4rem 2rem;
     text-align: center;
     color: white;
 }
@@ -147,6 +154,36 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
+/* Button Styles */
+.btn-primary {
+    background-color: #4169E1;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #3557d6;
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+/* Footer Styles */
 .footer {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 1rem;
@@ -159,21 +196,7 @@ nav a:hover {
     margin: 0;
 }
 
-.button-group a {
-    background-color: #4169E1;
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    margin: 0.5rem;
-    font-weight: bold;
-    font-family: 'Patrick Hand', cursive;
-}
-
-.button-group a:hover {
-    background-color: #3b5b9a;
-}
-
+/* Disclaimer Styles */
 .disclaimer {
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.8);
