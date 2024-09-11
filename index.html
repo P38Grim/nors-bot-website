@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rivvix</title>
+    <title>Rivvix - Ultimate Discord Bot</title>
     <link rel="icon" type="image/png" href="https://i.imgur.com/t6LlBb0.png">
-    <meta property="og:title" content="Rivvix">
-    <meta name="og:description" content="The ultimate all-in-one Discord bot designed to elevate your server experience.">
-    <meta property="og:image" content="https://i.imgur.com/ZVSHesQ.png">
+    <meta property="og:title" content="Rivvix - Ultimate Discord Bot">
+    <meta property="og:description" content="The ultimate all-in-one Discord bot designed to elevate your server experience.">
+    <meta property="og:image" content="https://i.imgur.com/mq2Gse6.png"> <!-- Embed Image -->
     <meta property="og:url" content="/">
     <meta name="theme-color" content="#4169E1">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -19,92 +19,106 @@
 </head>
 
 <body>
-    <div class="blackBar text-center">
-        Welcome to Rivvix - The Ultimate Discord Bot
-    </div>
+    <header class="bg-black text-white text-center py-4">
+        <h1 class="text-2xl font-bold">Welcome to Rivvix - The Ultimate Discord Bot</h1>
+    </header>
 
-    <nav id="navbar">
-        <button class="menu-button" onclick="toggleMenu()">Menu</button>
-        <div class="nav-links">
-            <a href="#top">Home</a>
-            <a href="#features">Features</a>
-            <a href="#about">About</a>
-            <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Support</a>
-            <a href="https://top.gg/bot/1087160815431458946/vote" target="_blank">Vote</a>
+    <nav id="navbar" class="bg-gray-800 text-white">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <button class="menu-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleMenu()">Menu</button>
+            <div class="nav-links flex space-x-4">
+                <a href="#top" class="hover:text-blue-300">Home</a>
+                <a href="#features" class="hover:text-blue-300">Features</a>
+                <a href="#about" class="hover:text-blue-300">About</a>
+                <a href="https://discord.com/invite/EHTaYeASUU" target="_blank" class="hover:text-blue-300">Support</a>
+                <a href="https://top.gg/bot/1087160815431458946/vote" target="_blank" class="hover:text-blue-300">Vote</a>
+            </div>
         </div>
     </nav>
 
-    <section id="top" class="section">
-        <h1>The Ultimate All-in-One Discord Bot</h1>
-        <p>Elevate Your Server with Rivvix</p>
-        <p>Rivvix provides a comprehensive suite of features to enhance your Discord experience, from moderation and music to giveaways and more.</p>
-        <div class="button-group">
-            <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&scope=bot&permissions=8" target="_blank">Invite Rivvix</a>
-            <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Join the Support Server</a>
+    <section id="top" class="section py-8 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">The Ultimate All-in-One Discord Bot</h2>
+        <p class="text-lg mb-4">Elevate Your Server with Rivvix</p>
+        <p class="mb-4">Rivvix provides a comprehensive suite of features to enhance your Discord experience, from moderation and music to giveaways and more.</p>
+        <div class="button-group space-x-4">
+            <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&scope=bot&permissions=8" target="_blank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Invite Rivvix</a>
+            <a href="https://discord.com/invite/EHTaYeASUU" target="_blank" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Join the Support Server</a>
         </div>
     </section>
 
-    <section id="features" class="section">
-        <h1>Features</h1>
-        <div class="features-container">
-            <div class="feature-card">
-                <img src="https://i.imgur.com/XZZ4H4h.png" alt="Feature 1">
-                <h2>Moderation</h2>
-                <p>Advanced moderation tools to keep your server safe and organized.</p>
+    <section id="features" class="section py-8 px-6">
+        <h2 class="text-3xl font-bold mb-4">Features</h2>
+        <div class="features-list space-y-4">
+            <div class="feature">
+                <h3 class="text-xl font-semibold">Comprehensive Moderation</h3>
+                <p>Manage and moderate your server effortlessly with advanced moderation tools.</p>
             </div>
-            <div class="feature-card">
-                <img src="https://i.imgur.com/f6O6jFT.png" alt="Feature 2">
-                <h2>Music</h2>
-                <p>Enjoy high-quality music playback and control directly from Discord.</p>
+            <div class="feature">
+                <h3 class="text-xl font-semibold">Music</h3>
+                <p>Enjoy high-quality music playback and playlist management directly from Discord.</p>
             </div>
-            <div class="feature-card">
-                <img src="https://i.imgur.com/bYjNMCY.png" alt="Feature 3">
-                <h2>Giveaways</h2>
-                <p>Host and manage giveaways effortlessly with Rivvix’s intuitive system.</p>
+            <div class="feature">
+                <h3 class="text-xl font-semibold">Giveaways</h3>
+                <p>Create and manage giveaways to engage your community effortlessly.</p>
             </div>
-            <div class="feature-card">
-                <img src="https://i.imgur.com/Z9YZf7c.png" alt="Feature 4">
-                <h2>Fun & Games</h2>
-                <p>Engage your community with a variety of fun and interactive games.</p>
+            <div class="feature">
+                <h3 class="text-xl font-semibold">Custom Commands</h3>
+                <p>Set up and configure custom commands tailored to your server's needs.</p>
+            </div>
+            <div class="feature">
+                <h3 class="text-xl font-semibold">Server Logging</h3>
+                <p>Keep track of important server activities with detailed logging.</p>
+            </div>
+            <div class="feature">
+                <h3 class="text-xl font-semibold">AI Features</h3>
+                <p>Utilize AI capabilities to enhance interaction and engagement within your server.</p>
+            </div>
+            <div class="feature">
+                <h3 class="text-xl font-semibold">Economy System</h3>
+                <p>Implement an interactive economy system to add fun and competition.</p>
+            </div>
+            <div class="feature">
+                <h3 class="text-xl font-semibold">Premium Features</h3>
+                <p>Access exclusive premium features for advanced customization and additional functionality.</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section">
-        <h1>About Rivvix</h1>
+    <section id="about" class="section py-8 px-6">
+        <h2 class="text-3xl font-bold mb-4">About Rivvix</h2>
         <p>Rivvix is not just another bot. It's a powerful tool designed to elevate your Discord server with an array of features and capabilities. Whether you're looking to improve moderation, enjoy high-quality music, or host exciting giveaways, Rivvix has you covered.</p>
-        <h2>Statistics</h2>
-        <div class="stats">
+        <h3 class="text-2xl font-semibold mt-6">Statistics</h3>
+        <div class="stats flex space-x-6 mt-4">
             <div class="stat">
-                <h3 id="servers">75+ Servers</h3>
+                <h4 class="text-xl font-bold">75+ Servers</h4>
             </div>
             <div class="stat">
-                <h3 id="members">16k+ Members</h3>
+                <h4 class="text-xl font-bold">16k+ Members</h4>
             </div>
             <div class="stat">
-                <h3 id="channels">15,600 Channels</h3>
+                <h4 class="text-xl font-bold">15,600 Channels</h4>
             </div>
         </div>
-        <h2>Meet the Developers</h2>
-        <div class="developers">
+        <h3 class="text-2xl font-semibold mt-6">Meet the Developers</h3>
+        <div class="developers flex space-x-6 mt-4">
             <div class="developer">
-                <img src="https://i.imgur.com/Ql2Qk3H.png" alt="Developer 1">
+                <img src="https://i.imgur.com/Ql2Qk3H.png" alt="Developer 1" class="w-16 h-16 rounded-full">
                 <p>ZayDocs</p>
             </div>
             <div class="developer">
-                <img src="https://i.imgur.com/5FjtOif.png" alt="Developer 2">
+                <img src="https://i.imgur.com/5FjtOif.png" alt="Developer 2" class="w-16 h-16 rounded-full">
                 <p>Hydro</p>
             </div>
         </div>
     </section>
 
-    <section id="disclaimer" class="disclaimer">
-        <h1>Disclaimer</h1>
-        <img src="https://i.imgur.com/N0dW215.png" alt="Disclaimer Image">
+    <section id="disclaimer" class="section py-8 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Disclaimer</h2>
+        <img src="https://i.imgur.com/N0dW215.png" alt="Disclaimer Image" class="mx-auto mb-4">
         <p>All features provided by Rivvix are intended for entertainment and administrative purposes. Rivvix is not responsible for any misuse or actions taken based on its functionalities. Use Rivvix responsibly.</p>
     </section>
 
-    <footer class="footer">
+    <footer class="bg-gray-800 text-white text-center py-4">
         <p>Made By ZayDocs | Rivvix Team</p>
     </footer>
 
@@ -122,24 +136,6 @@
                 nav.classList.remove('scrolled');
             }
         });
-
-        function typeStats() {
-            const stats = {
-                servers: '75+ Servers',
-                members: '16k+ Members',
-                channels: '15,600 Channels'
-            };
-            let index = 0;
-            let id = null;
-            for (const [key, value] of Object.entries(stats)) {
-                id = setInterval(() => {
-                    document.getElementById(key).innerText = value;
-                }, 2000 * index);
-                index++;
-            }
-        }
-
-        window.onload = typeStats;
     </script>
 </body>
 
