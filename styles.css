@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Patrick Hand', cursive;
+    color: #E5E7EB;
+    background: linear-gradient(135deg, rgba(30, 30, 70, 0.8), rgba(60, 60, 120, 0.8)), url('https://i.imgur.com/mq2Gse6.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.blackBar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Patrick Hand', cursive;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s;
+}
+
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #93C5FD;
+}
+
+.menu-button {
+    background-color: #4169E1;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Caveat', cursive;
+    display: none;
+}
+
+.menu-button:focus {
+    outline: none;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links a {
+    margin: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: inline-block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .nav-links a {
+        margin: 15px 0;
+        font-size: 1.2rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #93C5FD;
+    font-family: 'Caveat', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #0033A0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    text-align: center;
+    color: #E5E7EB;
+    font-size: 1rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.button-group a {
+    background-color: #4169E1;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0.5rem;
+    font-weight: bold;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.button-group a:hover {
+    background-color: #3b5b9a;
+}
+
+.disclaimer {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #0033A0;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.disclaimer img {
+    width: 100%;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+.disclaimer p {
+    font-size: 1.2rem;
+    color: #E5E7EB;
+}
