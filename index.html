@@ -9,248 +9,26 @@
     <link rel="icon" type="image/png" href="https://i.imgur.com/t6LlBb0.png">
     <meta property="og:title" content="Rivvix">
     <meta name="og:description" content="The ultimate all-in-one Discord bot designed to elevate your server experience.">
-    <meta property="og:image" content="https://i.imgur.com/t6LlBb0.png">
+    <meta property="og:image" content="https://i.imgur.com/ZVSHesQ.png">
     <meta property="og:url" content="/">
     <meta name="theme-color" content="#4169E1">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        body {
-            background: linear-gradient(45deg, #1E3A8A, #111827, #2C5282, #1E3A8A);
-            background-size: 200% 200%;
-            animation: gradientAnimation 10s ease infinite;
-            margin: 0;
-            padding: 0;
-            font-family: 'Patrick Hand', cursive;
-            color: #E5E7EB;
-        }
-
-        .blackBar {
-            background-color: #000000;
-            padding: 0.5rem;
-            color: #ffffff;
-            font-size: 1.2rem;
-            font-weight: bold;
-            font-family: 'Caveat', cursive;
-        }
-
-        nav {
-            background-color: #000000;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            font-family: 'Patrick Hand', cursive;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 0.5rem 1rem;
-            display: block;
-            transition: color 0.3s;
-            font-size: 1.1rem;
-        }
-
-        nav a:hover {
-            color: #93C5FD;
-        }
-
-        nav .menu-button {
-            display: none;
-        }
-
-        .menu-button {
-            background-color: #4169E1;
-            border: none;
-            color: white;
-            padding: 12px 20px;
-            font-size: 24px;
-            border-radius: 8px;
-            display: none;
-            cursor: pointer;
-            font-family: 'Caveat', cursive;
-        }
-
-        .menu-button:focus {
-            outline: none;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nav-links a {
-            margin: 0 15px;
-        }
-
-        @media (max-width: 768px) {
-            .menu-button {
-                display: inline-block;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #000000;
-                width: 100%;
-                text-align: center;
-                padding-top: 10px;
-            }
-
-            .nav-links a {
-                margin: 15px 0;
-                font-size: 1.2rem;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-        }
-
-        .section {
-            padding: 3rem 1.5rem;
-            text-align: center;
-            color: white;
-        }
-
-        .section h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: #93C5FD;
-            font-family: 'Caveat', cursive;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .section p {
-            font-size: 1.5rem;
-            margin-bottom: 2.5rem;
-            color: #E5E7EB;
-            font-family: 'Patrick Hand', cursive;
-        }
-
-        .featuresImages {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .featuresImages img {
-            max-width: 350px;
-            width: 100%;
-            height: auto;
-            margin: 1.5rem;
-            border: 4px solid #0033A0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .featuresImages img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .button-group {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .button-group a {
-            padding: 1rem 2rem;
-            background-color: #4169E1;
-            color: white;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            font-family: 'Caveat', cursive;
-            font-size: 1.2rem;
-        }
-
-        .button-group a:hover {
-            background-color: #2e58c1;
-        }
-
-        .footer {
-            background-color: #000000;
-            padding: 1rem 0.5rem;
-            color: white;
-            text-align: center;
-            font-size: 1rem;
-            font-family: 'Patrick Hand', cursive;
-        }
-
-        .footer img {
-            max-width: 100%;
-            height: auto;
-            border: none;
-        }
-
-        .footer p {
-            display: inline-block;
-            margin: 0;
-        }
-
-        .developers {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .developer {
-            text-align: center;
-        }
-
-        .developer img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-bottom: 0.5rem;
-            border: 4px solid #0033A0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .developer p {
-            font-family: 'Patrick Hand', cursive;
-            font-size: 1.5rem;
-            margin: 0;
-            color: #E5E7EB;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
     <div class="blackBar text-center">
         Welcome to Rivvix - The Ultimate Discord Bot
     </div>
 
-    <nav>
+    <nav id="navbar">
         <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <div class="nav-links">
             <a href="#top">Home</a>
             <a href="#features">Features</a>
+            <a href="#about">About</a>
             <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Support</a>
             <a href="https://top.gg/bot/1087160815431458946/vote" target="_blank">Vote</a>
         </div>
@@ -261,37 +39,73 @@
         <p>Elevate Your Server with Rivvix</p>
         <p>Rivvix provides a comprehensive suite of features to enhance your Discord experience, from moderation and music to giveaways and more.</p>
         <div class="button-group">
-            <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&permissions=28580859346423&integration_type=0&scope=bot+applications.commands" target="_blank">Invite Rivvix</a>
-            <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Support</a>
-            <a href="https://top.gg/bot/1087160815431458946/vote" target="_blank">Vote</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1087160815431458946&scope=bot&permissions=8" target="_blank">Invite Rivvix</a>
+            <a href="https://discord.com/invite/EHTaYeASUU" target="_blank">Join the Support Server</a>
         </div>
     </section>
 
     <section id="features" class="section">
         <h1>Features</h1>
-        <div class="featuresImages">
-            <img src="assets/img/feature1.png" alt="Feature 1">
-            <img src="assets/img/feature2.png" alt="Feature 2">
-            <img src="assets/img/feature3.png" alt="Feature 3">
+        <div class="features-container">
+            <div class="feature-card">
+                <img src="https://i.imgur.com/XZZ4H4h.png" alt="Feature 1">
+                <h2>Moderation</h2>
+                <p>Advanced moderation tools to keep your server safe and organized.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://i.imgur.com/f6O6jFT.png" alt="Feature 2">
+                <h2>Music</h2>
+                <p>Enjoy high-quality music playback and control directly from Discord.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://i.imgur.com/bYjNMCY.png" alt="Feature 3">
+                <h2>Giveaways</h2>
+                <p>Host and manage giveaways effortlessly with Rivvix’s intuitive system.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://i.imgur.com/Z9YZf7c.png" alt="Feature 4">
+                <h2>Fun & Games</h2>
+                <p>Engage your community with a variety of fun and interactive games.</p>
+            </div>
         </div>
     </section>
 
-    <section class="developers">
-        <div class="developer">
-            <img src="https://i.imgur.com/t6LlBb0.png" alt="ZayDocs">
-            <p>ZayDocs</p>
+    <section id="about" class="section">
+        <h1>About Rivvix</h1>
+        <p>Rivvix is not just another bot. It's a powerful tool designed to elevate your Discord server with an array of features and capabilities. Whether you're looking to improve moderation, enjoy high-quality music, or host exciting giveaways, Rivvix has you covered.</p>
+        <h2>Statistics</h2>
+        <div class="stats">
+            <div class="stat">
+                <h3 id="servers">75+ Servers</h3>
+            </div>
+            <div class="stat">
+                <h3 id="members">16k+ Members</h3>
+            </div>
+            <div class="stat">
+                <h3 id="channels">15,600 Channels</h3>
+            </div>
         </div>
-        <div class="developer">
-            <img src="https://i.imgur.com/El3PQxp.png" alt="Hydro">
-            <p>Hydro</p>
+        <h2>Meet the Developers</h2>
+        <div class="developers">
+            <div class="developer">
+                <img src="https://i.imgur.com/Ql2Qk3H.png" alt="Developer 1">
+                <p>ZayDocs</p>
+            </div>
+            <div class="developer">
+                <img src="https://i.imgur.com/5FjtOif.png" alt="Developer 2">
+                <p>Hydro</p>
+            </div>
         </div>
+    </section>
+
+    <section id="disclaimer" class="disclaimer">
+        <h1>Disclaimer</h1>
+        <img src="https://i.imgur.com/N0dW215.png" alt="Disclaimer Image">
+        <p>All features provided by Rivvix are intended for entertainment and administrative purposes. Rivvix is not responsible for any misuse or actions taken based on its functionalities. Use Rivvix responsibly.</p>
     </section>
 
     <footer class="footer">
-        <p>&copy; Rivvix - 2024 All rights reserved</p>
-        <div class="footer-widget">
-            <img src="https://top.gg/api/widget/1087160815431458946.svg" alt="Top.gg Widget">
-        </div>
+        <p>Made By ZayDocs | Rivvix Team</p>
     </footer>
 
     <script>
@@ -299,6 +113,33 @@
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
+
+        window.addEventListener('scroll', function () {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        function typeStats() {
+            const stats = {
+                servers: '75+ Servers',
+                members: '16k+ Members',
+                channels: '15,600 Channels'
+            };
+            let index = 0;
+            let id = null;
+            for (const [key, value] of Object.entries(stats)) {
+                id = setInterval(() => {
+                    document.getElementById(key).innerText = value;
+                }, 2000 * index);
+                index++;
+            }
+        }
+
+        window.onload = typeStats;
     </script>
 </body>
 
