@@ -49,8 +49,8 @@
         }
 
         .section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            margin-bottom: 2rem;
             color: #93C5FD;
             font-weight: bold;
             position: relative;
@@ -60,27 +60,50 @@
         .section h1::after {
             content: '';
             position: absolute;
-            left: 0;
+            left: 50%;
             bottom: -10px;
-            width: 50%;
-            height: 2px;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
             background-color: #93C5FD;
             border-radius: 5px;
         }
 
         .info-box {
             background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
             color: #E5E7EB;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .info-box:hover {
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        .discord-btn {
+            display: inline-block;
+            background-color: #7289DA;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1.25rem;
+            color: #ffffff;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .discord-btn:hover {
+            background-color: #5b6eae;
+            transform: translateY(-3px);
+        }
+
+        .discord-btn svg {
+            vertical-align: middle;
+            margin-right: 8px;
         }
 
         .footer {
@@ -88,6 +111,7 @@
             padding: 1rem;
             color: white;
             text-align: center;
+            font-size: 0.9rem;
         }
 
         .footer a {
@@ -117,12 +141,12 @@
     <section class="section">
         <h1>Support</h1>
         <div class="info-box">
-            <p>If you need assistance with Rivvix, here are some ways to get support:</p>
-            <ul>
-                <li><strong>Join our Support Server:</strong> <a href="https://discord.com/invite/nqQRXQv9jq" target="_blank">Click here to join</a></li>
-                <li><strong>Email us:</strong> <a href="mailto:fuelexbot@gmail.com">fuelexbot@gmail.com</a></li>
-            </ul>
-            <p>For any immediate issues or questions, feel free to reach out to us through these channels. We're here to help!</p>
+            <p>If you need assistance with Rivvix, our team is here to help! You can reach out to us in the following ways:</p>
+            <a class="discord-btn" href="https://discord.com/invite/nqQRXQv9jq" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.32 3.438 9.83 8.207 11.385.599.11.818-.26.818-.577v-2.157c-3.338.725-4.033-1.614-4.033-1.614-.545-1.383-1.332-1.751-1.332-1.751-1.09-.745.083-.73.083-.73 1.206.085 1.842 1.24 1.842 1.24 1.07 1.833 2.809 1.304 3.495.997.108-.774.419-1.304.762-1.603-2.666-.302-5.467-1.333-5.467-5.933 0-1.312.47-2.384 1.238-3.226-.125-.302-.537-1.522.116-3.176 0 0 1.01-.323 3.307 1.23.961-.267 1.993-.401 3.017-.406 1.023.005 2.057.139 3.018.406 2.295-1.553 3.305-1.23 3.305-1.23.655 1.654.243 2.874.119 3.176.77.842 1.238 1.914 1.238 3.226 0 4.611-2.804 5.628-5.478 5.923.43.372.815 1.106.815 2.227v3.303c0 .32.218.694.825.574C20.564 21.826 24 17.318 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                Join Our Discord
+            </a>
+            <p>For email inquiries, contact us at <a href="mailto:fuelexbot@gmail.com">fuelexbot@gmail.com</a>. We're ready to assist with any issues or questions you may have.</p>
         </div>
     </section>
 
